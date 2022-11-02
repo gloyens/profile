@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>George</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="topnav">
+    <a href="#" onclick="darkmode()"><i class="fa-solid fa-moon"></i></a>
+    <a href="mailto:georgegloyens@gmail.com" target="_blank">Email</a>
+    <a href="https://github.com/gloyens" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/gloyens/" target="_blank">LinkedIn</a>
+  </div>
+
+  <div class="header">
+    <div class="header-content">
+      <img src="images/profile-pic.jpg" class="header-img">
+      <div class="header-info">
+        <h1>Hi, I'm George.</h1>
+        <p class="description">Fullstack developer</p>
+        <a href="https://www.linkedin.com/in/gloyens/" class="btn-yellow">Contact me on LinkedIn</a>
+    </div>
+    </div>
+  </div>
+
+  <div class="project-list">
+    <a href="https://get-into-gizz.com" target="_blank"><div class="card-white">
+      <i class="fa-3x fa-solid fa-compact-disc"></i>
+      <p>Get Into Gizz</p>
+    </div></a>
+    <a href="https://gloyens.github.io/avatar-creator/" target="_blank"><div class="card-white">
+      <i class="fa-3x fa-solid fa-user-astronaut"></i>
+      <p>Avatar Creator</p>
+    </div></a>
+    <a href="https://starborg.itch.io/super-leaf-crusher" target="_blank"><div class="card-white">
+      <i class="fa-3x fa-solid fa-leaf"></i>
+      <p>Super Leaf Crusher game</p>
+    </div></a>
+  </div>
+
+<script>
+  function darkmode() {
+    var body = document.body;
+    var els = document.querySelectorAll(".card-white,.header");
+    var topnav = document.querySelector(".topnav");
+    var link = document.querySelectorAll(".topnav a");
+    var button = document.querySelector(".btn-yellow");
+
+    body.classList.toggle("dark-mode-1");
+    els.forEach(el => el.classList.toggle("dark-mode-2"));
+    topnav.classList.toggle("dark-mode-3");
+    link.forEach(el => el.classList.toggle("dark-mode-4"));
+    button.classList.toggle("dark-mode-5");
+  }
+</script>
+
+</body>
+</html>
