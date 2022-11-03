@@ -34,33 +34,81 @@
   </div>
 
   <div class="project-list">
-    <a href="https://get-into-gizz.com" target="_blank"><div class="card-white">
+    <a href="#" onclick="show('gizz')"><div class="card-white">
       <i class="fa-3x fa-solid fa-compact-disc"></i>
       <p>Get Into Gizz</p>
     </div></a>
-    <a href="https://gloyens.github.io/avatar-creator/" target="_blank"><div class="card-white">
+    <a href="#" onclick="show('avatar')"><div class="card-white">
       <i class="fa-3x fa-solid fa-user-astronaut"></i>
       <p>Avatar Creator</p>
     </div></a>
-    <a href="https://starborg.itch.io/super-leaf-crusher" target="_blank"><div class="card-white">
+    <a href="#" onclick="show('game')"><div class="card-white">
       <i class="fa-3x fa-solid fa-leaf"></i>
       <p>Super Leaf Crusher game</p>
     </div></a>
   </div>
 
+  <div class="popup-container" id="gizz">
+    <div class="popup">
+      <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
+      <img src="images/gizz.png" alt="King Gizzard" class="img-popup">
+      <div class="popup-info">
+        <h2>Get Into Gizz</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquid earum assumenda corrupti.</p>
+        <a href="https://www.get-into-gizz.com" target="_blank" class="btn-yellow">Live site</a>
+        <a href="https://github.com/gloyens/get-into-gizz" target="_blank" class="btn-yellow"><i class="fa-brands fa-github"></i> Github</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-container" id="avatar">
+    <div class="popup">
+      <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
+      <img src="images/gizz.png" alt="King Gizzard" class="img-popup">
+      <div class="popup-info">
+        <h2>Avatar Creator</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquid earum assumenda corrupti.</p>
+        <a href="https://gloyens.github.io/avatar-creator/" target="_blank" class="btn-yellow">Live site</a>
+        <a href="https://github.com/gloyens/avatar-creator" target="_blank" class="btn-yellow"><i class="fa-brands fa-github"></i> Github</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-container" id="game">
+    <div class="popup">
+      <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
+      <img src="images/gizz.png" alt="King Gizzard" class="img-popup">
+      <div class="popup-info">
+        <h2>Super Leaf Crusher game</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquid earum assumenda corrupti.</p>
+        <a href="https://starborg.itch.io/super-leaf-crusher" target="_blank" class="btn-yellow">Live site</a>
+        <!-- <a href="#" target="_blank" class="btn-yellow"><i class="fa-brands fa-github"></i> Github</a> -->
+      </div>
+    </div>
+  </div>
+
 <script>
   function darkmode() {
     var body = document.body;
-    var els = document.querySelectorAll(".card-white,.header");
+    var els = document.querySelectorAll(".card-white,.header,.popup,.btn-x");
     var topnav = document.querySelector(".topnav");
     var link = document.querySelectorAll(".topnav a");
-    var button = document.querySelector(".btn-yellow");
+    var button = document.querySelectorAll(".btn-yellow, .popup-info .btn-yellow");
 
     body.classList.toggle("dark-mode-1");
     els.forEach(el => el.classList.toggle("dark-mode-2"));
     topnav.classList.toggle("dark-mode-3");
     link.forEach(el => el.classList.toggle("dark-mode-4"));
-    button.classList.toggle("dark-mode-5");
+    button.forEach(el => el.classList.toggle("dark-mode-5"));
+  }
+
+  function hide() {
+    document.querySelectorAll(".popup-container").forEach(el =>
+    el.style.visibility = "hidden");
+  }
+
+  function show(popup) {
+    document.getElementById(popup).style.visibility = "visible";
   }
 </script>
 
