@@ -34,6 +34,14 @@
   </div>
 
   <div class="project-list">
+    <a href="#" onclick="show('20moc')"><div class="card-white">
+      <i class="fa-3x fa-solid fa-pen-nib"></i>
+      <p>20 Minutes of Crap</p>
+    </div></a>
+    <a href="#" onclick="show('nano')"><div class="card-white">
+      <i class="fa-3x fa-solid fa-mug-hot"></i>
+      <p>NANO</p>
+    </div></a>
     <a href="#" onclick="show('gizz')"><div class="card-white">
       <i class="fa-3x fa-solid fa-compact-disc"></i>
       <p>Get Into Gizz</p>
@@ -44,11 +52,37 @@
     </div></a>
     <a href="#" onclick="show('game')"><div class="card-white">
       <i class="fa-3x fa-solid fa-leaf"></i>
-      <p>Super Leaf Crusher game</p>
+      <p>Super Leaf Crusher</p>
     </div></a>
   </div>
 
-  <div class="popup-container" id="gizz">
+  <div class="popup-container" id="20moc" onclick="hide()">
+    <div class="popup">
+      <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
+      <img src="images/20moc.png" alt="20 Minutes of Crap" class="img-popup">
+      <div class="popup-info">
+        <h2>20 Minutes of Crap</h2>
+        <p>A Rails app that helps users break through writers' block, by forcing them to write non-stop for 20 minutes.</p>
+        <a href="https://twenty-moc.herokuapp.com/" target="_blank" class="btn-yellow">Live site</a>
+        <!-- <a href="https://github.com/gloyens/twenty_moc" target="_blank" class="btn-yellow"><i class="fa-brands fa-github"></i> Github</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-container" id="nano" onclick="hide()">
+    <div class="popup">
+      <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
+      <img src="images/nano.png" alt="Non Alcoholic Nights Out" class="img-popup">
+      <div class="popup-info">
+        <h2>NANO</h2>
+        <p>A Rails app to help users discover Non-Alcoholic Nights Out, made at Le Wagon London.</p>
+        <a href="http://www.getnano.uk" target="_blank" class="btn-yellow">Live site</a>
+        <a href="https://github.com/kiran-blip/nano" target="_blank" class="btn-yellow"><i class="fa-brands fa-github"></i> Github</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-container" id="gizz" onclick="hide()">
     <div class="popup">
       <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
       <img src="images/gizz.jpg" alt="King Gizzard" class="img-popup">
@@ -61,7 +95,7 @@
     </div>
   </div>
 
-  <div class="popup-container" id="avatar">
+  <div class="popup-container" id="avatar" onclick="hide()">
     <div class="popup">
       <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
       <img src="images/avatar.png" alt="Avatar Creator" class="img-popup">
@@ -74,43 +108,19 @@
     </div>
   </div>
 
-  <div class="popup-container" id="game">
+  <div class="popup-container" id="game" onclick="hide()">
     <div class="popup">
       <a href="#" class="btn-x" onclick="hide()"><i class="fa-2x fa-solid fa-xmark"></i></a>
       <img src="images/slc.gif" alt="Super Leaf Crusher game" class="img-popup">
       <div class="popup-info">
-        <h2>Super Leaf Crusher game</h2>
+        <h2>Super Leaf Crusher</h2>
         <p>Super Leaf Crusher is a short puzzle game made in Godot.</p>
         <a href="https://starborg.itch.io/super-leaf-crusher" target="_blank" class="btn-yellow">Live site</a>
-        <!-- <a href="#" target="_blank" class="btn-yellow"><i class="fa-brands fa-github"></i> Github</a> -->
       </div>
     </div>
   </div>
 
-<script>
-  function darkmode() {
-    var body = document.body;
-    var els = document.querySelectorAll(".card-white,.header,.popup,.btn-x");
-    var topnav = document.querySelector(".topnav");
-    var link = document.querySelectorAll(".topnav a");
-    var button = document.querySelectorAll(".btn-yellow, .popup-info .btn-yellow");
-
-    body.classList.toggle("dark-mode-1");
-    els.forEach(el => el.classList.toggle("dark-mode-2"));
-    topnav.classList.toggle("dark-mode-3");
-    link.forEach(el => el.classList.toggle("dark-mode-4"));
-    button.forEach(el => el.classList.toggle("dark-mode-5"));
-  }
-
-  function hide() {
-    document.querySelectorAll(".popup-container").forEach(el =>
-    el.style.visibility = "hidden");
-  }
-
-  function show(popup) {
-    document.getElementById(popup).style.visibility = "visible";
-  }
-</script>
+  <script src="main.js"></script>
 
 </body>
 </html>
