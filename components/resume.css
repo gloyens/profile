@@ -1,0 +1,142 @@
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  width: 740px;
+  min-height: 200px;
+  margin: 100px auto;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+hr {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  margin: 30px 0;
+}
+
+.resume-about {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.resume-about img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.resume-about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-icon {
+  padding: 0 8px;
+}
+
+.card-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 5px;
+
+  border: 2px solid black;
+  box-shadow: 0 3px 0 black;
+}
+
+.resume-card-text {
+  width: 100%;
+  padding: 10px;
+}
+
+.card-text-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.thumbnail {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.info {
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.skills-container {
+  display: flex;
+  padding: 5px 0;
+}
+
+.skills-container h4 {
+  min-width: 100px;
+  /* text-align: right; */
+  padding-right: 10px;
+  line-height: 32px;
+}
+
+.skills-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.skills-container li {
+  font-size: 14px;
+  list-style-type: none;
+  background-color: white;
+  border-radius: 5px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 48%;
+  padding: 20px;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.project-container p { font-size: 14px; }
+
+.project-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+.project-container li {
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.info-list {
+  font-size: 14px;
+  padding: 10px 0;
+  list-style-position: inside;
+}

@@ -1,8 +1,8 @@
 function darkmode() {
   var body = document.body;
-  var els = document.querySelectorAll(".card-white,.header,.popup,.btn-x");
+  var els = document.querySelectorAll(".card-white,.header,.popup,.btn-x,.card-container, .skills-container li");
   var topnav = document.querySelector(".topnav");
-  var link = document.querySelectorAll(".topnav a");
+  var link = document.querySelectorAll(".topnav a, .project-container, .resume-about-text a");
   var button = document.querySelectorAll(".btn-yellow, .popup-info .btn-yellow");
 
   body.classList.toggle("dark-mode-1");

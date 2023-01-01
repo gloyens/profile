@@ -1,4 +1,5 @@
 @import url("components/popup.css");
+@import url("components/resume.css");
 
 * {
   margin: 0;
@@ -8,6 +9,7 @@
   font-size: 100%;
   background: transparent;
   box-sizing: border-box;
+
 
   /* border: 1px solid red; */
 }
@@ -256,8 +258,8 @@ h1 {
   }
 
   .dark-mode-2 {
-    color: white;
-    background-color: #222024;
+    color: white !important;
+    background-color: #222024 !important;
   }
 
   .dark-mode-3 {
